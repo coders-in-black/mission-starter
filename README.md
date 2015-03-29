@@ -9,3 +9,7 @@ Install dev-dependencies
 Install Git Hook and start a fresh project
 
     ./install
+
+Build, watch and serve
+
+    gulp
