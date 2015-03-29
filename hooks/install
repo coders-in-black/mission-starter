@@ -1,0 +1,4 @@
+DIR=$(dirname $BASH_SOURCE)
+
+chmod +x $DIR/post-merge
+ln -s -f $DIR/post-merge $DIR/../.git/hooks/post-merge
