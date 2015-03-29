@@ -1,0 +1,9 @@
+chmod +x hooks/post-merge
+ln -s -f hooks/post-merge .git/hooks/post-merge
+
+rm -fr .git
+
+git init
+
+rm -fr hooks
+rm -fr init
