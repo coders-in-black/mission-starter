@@ -1,0 +1,10 @@
+# Install Git Hook
+chmod +x hooks/post-merge
+ln -s -f hooks/post-merge .git/hooks/post-merge
+
+# Remove remote after clone
+git remote rm origin
+
+# Remove install files
+rm -fr hooks
+rm -fr install

@@ -1,0 +1,11 @@
+/* Variables */
+$color-primary:   #000;
+$color-secondary: #000;
+
+/* Includes */
+@import 'misc/mixins';
+@import 'misc/reset';
+@import 'misc/base';
+@import 'elements/header';
+@import 'elements/footer';
+@import 'pages/homepage';
