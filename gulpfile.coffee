@@ -18,7 +18,6 @@ settings =
 paths =
     root:    './'
     assets:  './assets/'
-    vendors: './vendors/'
     jade:    './src/jade/'
     sass:    './src/sass/'
     coffee:  './src/coffee/'
@@ -64,14 +63,7 @@ gulp.task 'coffee', ->
     .pipe gulp.dest paths.output + 'js/'
 
 #
-# Copy vendors
-# 
-gulp.task 'vendors', ->
-  gulp.src paths.vendors + '**/*'
-    .pipe gulp.dest paths.output + 'vendors/'
-
-#
-# Copy vendors
+# Copy assets
 # 
 gulp.task 'assets', ->
   gulp.src paths.assets + '**/*'
@@ -90,7 +82,7 @@ gulp.task 'browsersync', ->
 # Watch
 # 
 gulp.task 'watch', ->
-  gulp.watch paths.vendors + '**/*',        [ 'vendors', reload ]
+  gulp.watch 'dist/vendors/**/*',           [ reload ]
   gulp.watch paths.sass    + '**/*.*',      [ 'sass',    reload ]
   gulp.watch paths.jade    + '**/*.jade',   [ 'jade',    reload ]
   gulp.watch paths.coffee  + '**/*.coffee', [ 'coffee',  reload ]
@@ -103,7 +95,6 @@ gulp.task 'build', [
   'jade' 
   'sass'
   'assets'
-  'vendors'
 ]
 
 #
