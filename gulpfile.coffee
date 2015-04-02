@@ -16,12 +16,12 @@ settings =
     compress: true
 
 paths =
-    root:    './'
-    assets:  './assets/'
-    jade:    './src/jade/'
-    sass:    './src/sass/'
-    coffee:  './src/coffee/'
-    output:  './dist/'
+    root:     './'
+    assets:   './assets/'
+    jade:     './src/jade/'
+    sass:     './src/sass/'
+    coffee:   './src/coffee/'
+    output:   './dist/'
 
 #
 # Jade
@@ -30,7 +30,7 @@ gulp.task 'jade', ->
   gulp.src(paths.jade + 'pages/**/*.jade')
     .pipe plugins.plumber()
     .pipe plugins.jade
-        pretty: if settings.jade.compress then false else true
+      pretty: if settings.jade.compress then false else true
     .pipe gulp.dest paths.output
 
 #
