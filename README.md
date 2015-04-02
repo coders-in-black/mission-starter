@@ -10,6 +10,10 @@ Install Git Hook and start a fresh project
 
     npm run init
 
-Build, watch and serve
+Build, watch and serve with browsers synchronized
 
     gulp
+
+Build, watch and serve without browser synchronized
+
+    gulp --nosync
