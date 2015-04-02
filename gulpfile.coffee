@@ -82,7 +82,7 @@ gulp.task 'browsersync', ->
 # Watch
 # 
 gulp.task 'watch', ->
-  gulp.watch 'dist/vendors/**/*',           [ reload ]
+  gulp.watch 'dist/vendors/**/*',          [ reload ]
   gulp.watch paths.assets + '**/*.*',      [ 'assets', reload ]
   gulp.watch paths.sass   + '**/*.*',      [ 'sass',   reload ]
   gulp.watch paths.jade   + '**/*.jade',   [ 'jade',   reload ]
