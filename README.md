@@ -8,7 +8,7 @@ Install dev-dependencies
 
 Install Git Hook and start a fresh project
 
-    ./init
+    npm run init
 
 Build, watch and serve
 
