@@ -1,8 +1,8 @@
 gulp        = require 'gulp'
-gulpLoad    = require 'gulp-load-plugins'
+gulpPlugins = require 'gulp-load-plugins'
 browserSync = require 'browser-sync'
-yargs       = require('yargs')
-plugins     = gulpLoad()
+yargs       = require 'yargs'
+plugins     = gulpPlugins()
 reload      = browserSync.reload
 argv        = yargs.argv
 
@@ -83,10 +83,10 @@ gulp.task 'browsersync', ->
 # 
 gulp.task 'watch', ->
   gulp.watch 'dist/vendors/**/*',           [ reload ]
-  gulp.watch paths.assets  + '**/*.*',      [ 'assets', reload ]
-  gulp.watch paths.sass    + '**/*.*',      [ 'sass',   reload ]
-  gulp.watch paths.jade    + '**/*.jade',   [ 'jade',   reload ]
-  gulp.watch paths.coffee  + '**/*.coffee', [ 'coffee', reload ]
+  gulp.watch paths.assets + '**/*.*',      [ 'assets', reload ]
+  gulp.watch paths.sass   + '**/*.*',      [ 'sass',   reload ]
+  gulp.watch paths.jade   + '**/*.jade',   [ 'jade',   reload ]
+  gulp.watch paths.coffee + '**/*.coffee', [ 'coffee', reload ]
 
 #
 # Build
